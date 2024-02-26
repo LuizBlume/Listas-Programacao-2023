@@ -1,0 +1,34 @@
+<script>
+    //Problema: Cidades e Estados
+    /*
+    Considere a seguinte lista de Cidades:
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    Pergunte ao usuário a qual estado pertence cada uma das cidades e adicione em listas separadas, sendo uma lista para cada estado.
+    No final do programa apresente os estados com as suas respectivas cidades. Porém, ordene a apresentação das listas, apresentando de forma decrescente pela quantidade de cidades que o estado possui.
+    */
+
+    //Entrada
+
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let cidadeEst = [];
+
+    //Processamento
+
+    for (let estado of cidades) {
+        let estadoUsuario = prompt(`A cidade de ${estado} é de qual estado? PR-Paraná | SC-Santa Cataraina | RS-Rio Grande do Sul`).trim().toUpperCase();
+        if (estadoUsuario === "PR") {
+            cidadeEst.push(estado);
+        }
+        if (estadoUsuario === "SC") {
+            cidadeEst.push(estado);
+        }
+        if (estadoUsuario === "RS") {
+            cidadeEst.push(estado);
+        }
+    }
+    cidadeEst.sort((a, b) => cidadeEst[b] - cidadeEst[a]);
+    alert(`As cidades do PR são`)
+
+    //Saída
+
+</script>

@@ -1,0 +1,36 @@
+<script>
+    //PROBLEMA
+    /*
+    Considere que uma pessoa está investindo, no início de cada mês, uma quantia de R$ 100,00. O rendimento ao final do mês é de 1,8% (0.018).
+    Calcule qual será o total que a pessoa terá investido ao final de 24 meses, ao final de 48 meses e ao final de 96 meses.
+    Apresente os valores para cada um dos períodos.
+    Apresente também qual foi o rendimento que a pessoa obteve em cada um dos períodos (ou seja, o que conseguiu obter além da quantia investida).
+    */
+
+    //ENTRADA
+
+    let investimento = 0;
+    let rendimentoTotal = 0;
+    let mensagem = 0;
+    
+    //PROCESSAMENTO
+    
+    for(let i = 1; i <= 96; i++) {
+        investimento = investimento + 100;
+        let rendimento = investimento * 0.018;
+        rendimentoTotal = rendimentoTotal + rendimento;
+        investimento = investimento + rendimento;
+        if (i == 24) {
+            document.write(`No mês 24 o investimento será de R$${investimento.toFixed(2)}. Terá rendimento de R$${rendimentoTotal.toFixed(2)}<br>`);
+        }
+        else if (i == 48) {
+            document.write(`No mês 48 o investimento será de R$${investimento.toFixed(2)}. Terá rendimento de R$${rendimentoTotal.toFixed(2)}<br>`);
+        }
+        else if (i == 96) {
+            document.write(`No 96 mês, o investimento é de R$${investimento.toFixed(2)}. Terá rendimento de R$${rendimentoTotal.toFixed(2)}<br>`)
+        }
+    }
+    
+    //SAÍDA
+    
+</script>

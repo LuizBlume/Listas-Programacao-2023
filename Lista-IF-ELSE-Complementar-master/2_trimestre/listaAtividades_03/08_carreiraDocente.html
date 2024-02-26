@@ -1,0 +1,54 @@
+<meta charset="UTF-8" />
+<script>
+    // Problema: Carreira Docente
+    /*
+    Peça para o Professor informar quantos anos de carreira possui. Peça também para que o Professor informe a quantidade de Projetos de Pesquisa que já coordenou. Também peça para que informe a quantidade de Projetos de Extensão que orientou. Por último, peça para informar a quantidade de TCCs que já orientou.
+
+    - Considere que cada ano de carreira equivale 2.5 pontos;
+    - Considere que cada Projeto de Pesquisa equivale a 5 pontos;
+    - Considere que cada Projeto de Extensão equivale a 5 pontos;
+    - Considere que cada TCC equivale a 3 pontos.
+    
+    Como resultado do cálculo das pontuações, a classificação poderá ser:
+
+    - Se o Professor possuir até 30 pontos (inclusive), será considerado "CONVIDADO";
+    - Se o Professor possuir até 50 pontos, será considerado "AGREGADO";
+    - Se o Professor possuir mais de 50 pontos, será considerado "TITULAR".
+    
+    Calcule os pontos e apresente a classificação do Professor.
+    */
+
+    // Entrada
+
+    const carreira = Number(prompt("Informe quantos anos de carreira você possui?").trim().replace(".", ","));
+    const projetosPesquisa = Number(prompt("Informe quantos projetos de pesquisa você ja coordenou?").trim().replace(".", ","));
+    const projetoExtensao = Number(prompt("Informe quantos projetos de pesquisa você ja orientou?").trim().replace(".", ","));
+    const TCC = Number(prompt("Informe quantos TCCs você ja orientou?").trim().replace(".", ","))
+    
+    // Processamento
+
+    let anoCarreira = carreira * 2.5;
+    let projPesq = projetosPesquisa * 5;
+    let projExten = projetoExtensao * 5;
+    let TCCnota = TCC * 3;
+    let total = anoCarreira + projExten + projPesq + TCCnota;
+
+    if (total <= 30) {
+        alert(`Parabéns, você é convidado. Fez um total de ${total} pontos.`);
+    }
+
+    else if (total <= 50) {
+        alert(`Parabéns, você é agregado. Fez um total de ${total} pontos.`);
+    }
+
+    else if (total > 50) {
+        alert(`Parabéns, você é titular. Fez um total de ${total} pontos.`);
+    }
+
+    else {
+        alert("Opção inválida!");
+    }
+
+    // Saída
+
+</script>

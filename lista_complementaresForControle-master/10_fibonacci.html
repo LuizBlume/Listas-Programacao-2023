@@ -1,0 +1,25 @@
+<script>
+    //PROBLEMA
+    /*
+    Considere a seguinte sequência de números:
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    Pergunte ao usuário quantos números deseja adicionar na sequência de fibonacci.
+    Apresente a lista ao final do programa.
+    */
+
+    //ENTRADA
+
+    let fibonacci = [0, 1];
+    const qtd = Number(prompt("Informe a quantidade de números que você gostaria de adicionar na lista"));
+
+    //PROCESSAMENTO
+
+    for (let i = 1; i <= qtd; i++) {
+        fibonacci.push(fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2])
+    }
+    document.write(`${fibonacci.join(", ")}`)
+
+    //SAÍDA
+
+
+</script>

@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Peça para o programa perguntar ao professor regente o nome dos três candidatos a representante da sala.
+    Peça também para o programa perguntar ao professor regente a quantidade de alunos votantes.
+    Desenvolva um programa que armazene o voto de cada aluno da sala e apresente o resultado da votação, com o quantitativo de votos e também a porcentagem de votos de cada candidato a representante de sala.
+    */
+
+    //ENTRADA
+
+    const rep1 = prompt("Informe o nome de um primeiro candidato a representante:").trim();
+    const rep2 = prompt("Informe o nome de um segundo candidato a representante:").trim();
+    const rep3 = prompt("Informe o nome de um terceiro candidato a representante:").trim();
+    const votos = Number(prompt("Informe quantas pessoas votaram").trim());
+
+    //PROCESSAMENTO
+
+    let cont1 = 0;
+    let cont2 = 0;
+    let cont3 = 0;
+
+
+    for (let i = 0; i < votos; i++) {
+        const voto = Number(prompt(`Informe em quem você vai votar: 1 - ${rep1}; 2- ${rep2}; 3 - ${rep3}`));
+
+        if (voto === 1) {
+            cont1++;
+        }
+        else if (voto === 2) {
+            cont2++;
+        }
+        else if (voto === 3) {
+            cont3++;
+        }
+    }
+
+    let ganhador = (cont1 > cont2 && cont1 > cont3) ? rep1 : (cont2 > cont1 && cont2 > cont3) ? rep2 : rep3;
+    alert(`O ganhador foi o ${ganhador}`);
+
+    alert(`${rep1} teve ${cont1} voto, isso representa ${cont1 * 100 / votos}%. ${rep2} teve ${cont2} voto, isso representa ${cont2 * 100 / votos}%. ${rep3} teve ${cont3} voto, isso representa ${cont3 * 100 / votos}%`)
+
+    //SAÍDA
+
+</script>

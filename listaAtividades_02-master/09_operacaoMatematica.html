@@ -1,0 +1,68 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    const n1 = parseFloat(prompt("Informe um numero"));
+    const n2 = parseFloat(prompt("Informe novamente um numero"));
+    const operacao = prompt(`Qual operação deseja realizar? Informe usando "+", "-", "*", "/"`);
+
+    //PROCESSAMENTO
+
+    let resultado = 0;
+
+    if (operacao == "+") {
+        resultado = n1 + n2;
+    }
+
+    else if (operacao == "-") {
+        resultado = n1 - n2;
+    }
+
+    else if (operacao == "/") {
+        resultado = n1 / n2;
+    }
+
+    else if (operacao == "*") {
+        resultado = n1 * n2;
+    }
+
+    let NumPosNeg = "";
+
+    if (resultado > 0) {
+        NumPosNeg = "positivo"
+    }
+    else {
+        NumPosNeg = "Negativo"
+    }
+
+    let parImpar = "";
+
+    if (resultado % 2 == 0) {
+        parImpar = "Par"
+    }
+
+    else {
+        parImpar = "Impar"
+    }
+
+    let decimal = "";
+    
+    if (Number.isInteger (resultado)) {
+        decimal = "Inteiro";
+    }
+
+    else {
+        decimal = "Decimal"
+    }
+
+    //SAÍDA
+
+    alert(`A soma do seu numero é ${resultado}. Seu numero contem ${NumPosNeg}, ${parImpar} e ${decimal}`)
+
+</script>

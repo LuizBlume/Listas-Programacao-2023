@@ -1,0 +1,57 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    //PROBLEMA
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    
+    const combustivel = prompt(`Qual combustivel voce gostaria? A para alcool e G para gasolina`).trim().toUpperCase();
+    const litros = Number(prompt("Informe a quantidade de litros que você pediu").trim());
+
+    //PROCESSAMENTO
+
+    if (combustivel.length > 1) {
+        alert("Opção inválida")
+    }
+
+    else {
+        if (combustivel == "A") {
+            if (litros >= 20) {
+                let preco = litros * 6.10 * 0.3 * litros;
+                alert(`O valor seria de R$${preco.toFixed(2).replace(".", ",")}`);
+            }
+            else {
+                let preço = litros * 6.10 - 6.10 * 0.5 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+        }
+        else if (combustivel == "G") {
+            if (litros <= 20) {
+                let preço = litros * 6.50 - 6.50 * 0.4 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+            else {
+                let preço = litros * 6.50 - 6.50 * 0.6 * litros;
+                alert(`O valor seria de R$${preço.toFixed(2).replace(".", ",")}`);
+            }
+        }
+        else {
+            alert(`Valor inválido.`);
+        }
+    }
+    
+    //SAÍDA
+
+
+</script>

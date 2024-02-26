@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<script>
+    //PROBLEMA
+    //Considere a lista abaixo:
+    // let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
+    //Apresente apenas os números pares. Apresente também a quantidade de números pares que existem e apresente a quantidade de elementos da lista original.
+
+    //ENTRADA
+
+
+    //PROCESSAMENTO
+
+    let listaDeItens = [1, "João", "Eduardo", "Joice", 3, 5, 6, 8, "Maria", 5.6, 10];
+    let par = [];
+    for (let item of listaDeItens) {
+        if (item % 2 === 0) {
+            par.push(item)
+        }
+    }
+    alert(`Os números pares são: ${par.join(" - ")} \n E a quantidade de números pares é de: ${par.length} \n E a quantidade de elementos é: ${listaDeItens.length}`)
+    //SAÍDA
+
+</script>

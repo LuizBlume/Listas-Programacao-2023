@@ -1,0 +1,29 @@
+<script>
+    //Problema: Remover SUV
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    //Pergunte ao usuário qual carro deseja REMOVER da lista.
+    //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
+
+    //ENTRADA
+
+    const carro = Number(prompt("Informe qual carro você deseja tirar da lista: 0-Tiggo | 1-Sportage | 2-Tucson | 3-Ecosport").trim());
+
+    //PROCESSAMENTO
+
+    let ordem = ["Tiggo", "Sportage", "Tucson", "Ecosport"];
+    alert(ordem.join(" - "));
+    
+    if (carro < 0 || carro > 3 || isNaN(carro) === true) {
+        alert(`Bote um novo número`);
+    }
+
+    else {
+        ordem.splice(carro, 1);
+        alert(ordem.join(" - "));
+    }
+    
+
+    //SAÍDA
+
+</script>

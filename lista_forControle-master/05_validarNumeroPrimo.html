@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
+    */
+
+    //ENTRADA
+
+    const numero = Number(prompt("Informe um número.").trim());
+
+    //PROCESSAMENTO
+
+    // let divisivel = [];
+    let divisivel = 0;
+    if (numero === 1) {
+        numero = Number(prompt("Informe outro número diferente de 1"));
+    }
+    else {
+        for (let i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                divisivel++;
+            }
+            
+        }
+    }
+    if (divisivel > 0) {
+        alert(`${numero} não é primo!`);
+    }
+    else {
+        alert(`${numero} é primo!`);
+    }
+
+
+    //SAÍDA
+
+</script>

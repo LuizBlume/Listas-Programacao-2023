@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Validar Usuário e Senha
+    Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
+    */
+
+    //Entrada
+
+    let nome = prompt("Informe seu nome:").trim();
+    let senha = prompt("Informe sua senha:").trim();
+
+    //Processamento
+
+    while (nome == senha) {
+        alert("A senha não pode ser igual ao nome.");
+        nome = prompt(`Informe seu nome.`).trim()
+        senha = prompt(`Informe uma senha diferente ao nome.`).trim()
+    }
+    alert(`Nome e senha válidados!`);
+
+    //Saída
+
+</script>

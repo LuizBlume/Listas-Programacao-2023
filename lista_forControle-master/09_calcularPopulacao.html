@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA
+    Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. Apresente os dados em tela.
+    */
+
+    //ENTRADA
+
+
+    //PROCESSAMENTO
+    let hab = 50000;
+    let ano5 = hab;
+    let ano10 = hab;
+    for (let i = 1; i <= 10; i++) {
+        hab = hab * 1.015;
+        if (i === 5) {
+            ano5 = hab;
+        }
+        else if (i === 10) {
+            ano10 = hab;
+        }
+    }
+        alert(`A popupalação daqui 5 anos será de ${ano5.toFixed(0)} e daqui a 10 anos de ${ano10.toFixed(0)}.`)
+
+    //SAÍDA
+
+</script>

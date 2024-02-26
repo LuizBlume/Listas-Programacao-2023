@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    //PROBLEMA: Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+    De acordo com as respostas, informe qual a estação do ano correspondente.
+    */
+
+    //ENTRADA
+
+    const hemisferio = prompt("Informe em que hemisfério você vive:").trim().toLowerCase();
+    const mes = prompt("Informe em que mês vocês estão:").trim().toLowerCase();
+    let estacao;
+
+    //PROCESSAMENTO
+
+    switch (hemisferio) {
+        case "sul":
+            switch (mes) {
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    alert("Verão!")
+                    break;
+                case "março":
+                case "abril":
+                case "maio":
+                    alert("Outono!")
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    alert("inverno!")
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    alert("primavera!")
+                    break;
+                default:
+                    alert("Opção inválida.")
+                    break;
+            }
+            break;
+            case "norte":
+            switch (mes) {
+                case "dezembro":
+                case "janeiro":
+                case "fevereiro":
+                    alert("Inverno!")
+                    break;
+                case "março":
+                case "abril":
+                case "maio":
+                    alert("Primavera!")
+                    break;
+                case "junho":
+                case "julho":
+                case "agosto":
+                    alert("Verão!")
+                    break;
+                case "setembro":
+                case "outubro":
+                case "novembro":
+                    alert("Outono!")
+                    break;
+                default:
+                    alert("Opção inválida.")
+                    break;
+            }
+            break;
+    }
+
+    //SAÍDA
+
+</script>

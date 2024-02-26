@@ -1,0 +1,38 @@
+<script>
+    /*
+    //PROBLEMA
+    Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+    - "Telefonou para a vítima?"
+    - "Esteve no local do crime?"
+    - "Mora perto da vítima?"
+    - "Devia para a vítima?"
+    - "Já trabalhou com a vítima?"
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".
+    */
+
+    //ENTRADA
+
+    const telefone = Number(prompt("Telefonou para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const local = Number(prompt("Esteve no local do crime? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const casa = Number(prompt("Mora perto da vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const divida = Number(prompt("Devia para a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    const trabalho = Number(prompt("Já trabalhou com a vítima? (Informe S ou N)").toUpperCase().replace("S", "1").replace("N", "0").trim());
+    //PROCESSAMENTO
+
+    if (telefonema.length > 1 || local.length > 1 || moradia.length > 1 || divida.length > 1 || trabalho.length > 1) {
+        alert(`Valor inválido`);
+    }
+    else {
+        if (telefone + local + casa + divida + trabalho == 2) {
+            alert(`Classificação: Suspeito.`);
+        }
+        else if (telefone + local + casa + divida + trabalho == 3 || telefonema + local + moradia + divida + trabalho == 4) {
+            alert(`Classificação: Cúmplice.`);
+        }
+        else if (telefone + local + casa + divida + trabalho == 5) {
+            alert(`Classificação: Assasino`);
+        }
+        else {
+            alert(`Classificação: Inocente`);
+        }
+    }

@@ -1,0 +1,19 @@
+<script>
+    let cumprimento = function () {
+        const horaAtual = new Date().getHours();
+        if (horaAtual < 12) {
+            return 'Bom dia'
+        }
+        else if (horaAtual < 18) {
+            return 'Boa tarde'
+        }
+        else {
+            return 'Boa noite'
+        }
+    }
+    let nome = prompt("Informe seu nome");
+    function saudacao(msg, nome) {
+        alert(`${msg} ${nome}`)
+    }
+    saudacao(cumprimento(), nome)
+</script>

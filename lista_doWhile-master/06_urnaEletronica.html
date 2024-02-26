@@ -1,0 +1,68 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    Problema: Urna eletrônica
+    Faça um programa que simule a urna eletrônica.
+    A tela a ser apresentada deverá ser da seguinte forma:
+    As opções são:
+    1. Candidato Joãozinho
+    2. Candidato Mariazinha
+    3. Nulo
+    4. Branco
+    Entre com o seu voto:
+
+    O programa deverá ler os votos dos eleitores e, quando for entrado o número 0, apresentar as seguintes
+    informações:
+    a) O número de votos de cada candidato;
+    b) A porcentagem de votos nulos;
+    c) A porcentagem de votos brancos;
+    d) O candidato vencedor.
+    */
+
+    //Entrada
+
+    let joaozinho = 0;
+    let mariazinha = 0;
+    let nulo = 0;
+    let branco = 0;
+    let votos;
+    let eleitores = 0;
+    let vencedor = "";
+
+    //Processamento
+
+    while (true) {
+        votos = Number(prompt("Informe em quem você deseja votar: 0-Parar Votação | 1-Joãozinho | 2-Mariazinha | 3-Nulo | 4-Branco").trim());
+
+        if (votos === 0) {
+            break;
+        }
+        switch (votos) {
+            case 1:
+                joaozinho++;
+                break;
+            case 2:
+                mariazinha++;
+                break;
+            case 3:
+                nulo++;
+                break;
+            case 4:
+                branco++;
+                break;
+            default:
+                alert("Opçao inválida, insira outro número!")
+        }
+        eleitores++;
+    }
+
+    if (joaozinho > mariazinha) {
+        vencedor = "Joãozinho"
+    }
+    else {
+        vencedor = "Mariazinha"
+    }
+    alert(`Os votos de Joãozinho é de ${joaozinho} votos \nOs votos de Mariazinha é de ${mariazinha} votos \nOs votos nulos são ${nulo} votos \nOs votos em branco são ${branco} votos\n Porcentagem de votos nulos é de ${(nulo / eleitores) * 100}% \nPorcentagem de votos brancos é de ${(branco / eleitores) * 100}% \nO candidato vencedor é ${vencedor}.`)
+    //Saída
+
+</script>
