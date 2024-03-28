@@ -1,0 +1,7 @@
+<script>
+    const horas = Number(prompt(`Informe quantas horas voce trabalha por mes`));
+    const valorhora = Number(prompt(`Informe quanto voce recebe por hora`));
+    const salario = (horas * valorhora);
+    const salariofinal = salario - (salario * 0.08) - (salario * 0.11);
+    alert(`Seu salario liquido é de R$${salariofinal.toFixed(2)}`);
+</script>
